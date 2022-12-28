@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
     <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+    <script src="https://kit.fontawesome.com/5bf87cd97a.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -194,7 +195,15 @@
                         <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">SENFOOD</a>
+                        <a href="{{ route("Dashboard") }}" class="d-block">
+                            <?php
+                            $admin_name = session()->get('admin_name');
+                            if ($admin_name != null) {
+                                echo "<span>$admin_name</span>";
+                            }
+                            ?>
+                            | SENFOOD
+                        </a>
                     </div>
                 </div>
                 <!-- SidebarSearch Form -->
@@ -224,15 +233,15 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/layout/top-nav.html" class="nav-link">
+                                    <a href="{{ route("Category.Add") }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Add Category</p>
+                                        <p>Add Category Food</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/layout/top-nav.html" class="nav-link">
+                                    <a href="{{ route("Category.List") }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>List Category</p>
+                                        <p>List Category Food</p>
                                     </a>
                                 </li>
                             </ul>
