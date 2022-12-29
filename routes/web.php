@@ -28,3 +28,4 @@ Route::get("/Sign-Out",[AdminController::class,"SignOut"])->name("Admin.SignOut"
 // Category Food
 Route::get("/Add-Category",[CategoryFoodController::class,"AddCategory"])->name("Category.Add");
 Route::get("/List-Category",[CategoryFoodController::class,"ListCategory"])->name("Category.List");
+Route::post("/Save-Category",[CategoryFoodController::class,"SaveCategory"])->name("Category.Add.Save");

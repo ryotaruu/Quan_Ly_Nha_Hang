@@ -23,27 +23,40 @@
                                     <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
                                         colspan="1" aria-label="Name Category">Name Category</th>
                                     <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
+                                        colspan="1" aria-label="Desc Category">Desc Category</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
                                         colspan="1" aria-label="Status">
                                         Status</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
-                                        colspan="1" aria-label="Date">Date</th>
                                     <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
                                         colspan="1" aria-label="Date">Action</th>
 
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="odd">
-                                    <td class="dtr-control sorting_1" tabindex="0">Gecko</td>
-                                    <td>Firefox 1.0</td>
-                                    <td>Win 98+ / OSX.2+</td>
-                                    <td>1.7</td>
-                                    <td>
-                                        <button class="btn btn-warning"><i class="fa-regular fa-pen-to-square"></i>  Edit</button>
-                                        <button class="btn btn-danger" style="margin-left: 15px"><i class="fa-regular fa-trash-can"></i>  Delete</button>
-                                    </td>
-                                </tr>
-
+                                @foreach ($ListCategoryFood as $key => $listCategoryFoods)
+                                    <tr class="odd">
+                                        <td class="dtr-control sorting_1" tabindex="0">
+                                            {{ $listCategoryFoods->category_id }}</td>
+                                        <td>{{ $listCategoryFoods->category_name }}</td>
+                                        <td>{{ $listCategoryFoods->category_desc }}</td>
+                                        <td>
+                                            <?php
+                                            if($listCategoryFoods->category_status == 0){
+                                                echo "<a href='{{ route('Category.List.Hide') }}'><i class='fa-solid fa-toggle-off'></i> Hide</a>";
+                                            }else {
+                                                echo "<a href='{{ route('Category.List.Show') }}'><i class='fa-solid fa-toggle-on'></i>Show</a>";
+                                            }
+                                            ?>
+                                        </td>
+                                        
+                                        <td>
+                                            <button class="btn btn-warning"><i class="fa-regular fa-pen-to-square"></i>
+                                                Edit</button>
+                                            <button class="btn btn-danger"><i
+                                                    class="fa-regular fa-trash-can"></i> Delete</button>
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
 
                         </table>
