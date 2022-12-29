@@ -29,3 +29,8 @@ Route::get("/Sign-Out",[AdminController::class,"SignOut"])->name("Admin.SignOut"
 Route::get("/Add-Category",[CategoryFoodController::class,"AddCategory"])->name("Category.Add");
 Route::get("/List-Category",[CategoryFoodController::class,"ListCategory"])->name("Category.List");
 Route::post("/Save-Category",[CategoryFoodController::class,"SaveCategory"])->name("Category.Add.Save");
+Route::get("/Hide-Category-Food/{CategoryFoodID}",[CategoryFoodController::class,"HideCategoryFood"])->name("Category.List.Hide");
+Route::get("/Show-Category-Food/{CategoryFoodID}",[CategoryFoodController::class,"ShowCategoryFood"])->name("Category.List.Show");
+Route::get("/Edit-Category/{CategoryFoodID}",[CategoryFoodController::class,"EditCategory"])->name("Category.Edit");
+Route::get("/Delete-Category/{CategoryFoodID}",[CategoryFoodController::class,"DeleteCategory"])->name("Category.Delete");
+Route::post("Update-Category/{category_food_id}",[CategoryFoodController::class,"UpdateCategory"])->name("Category.Update");

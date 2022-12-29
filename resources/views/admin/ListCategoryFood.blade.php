@@ -13,6 +13,13 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
+                        <?php
+                        $message = session()->get("message");
+                        if($message){
+                            echo "<span class='text-alert' style='color: green'>$message</span>";
+                            $message = session()->put("message","");
+                        }
+                        ?>
                         <table id="example2" class="table table-bordered table-hover dataTable dtr-inline"
                             aria-describedby="example2_info">
                             <thead>
@@ -42,18 +49,21 @@
                                         <td>
                                             <?php
                                             if($listCategoryFoods->category_status == 0){
-                                                echo "<a href='{{ route('Category.List.Hide') }}'><i class='fa-solid fa-toggle-off'></i> Hide</a>";
+                                                echo "<a href='/Hide-Category-Food/$listCategoryFoods->category_id'><i class='fa-solid fa-toggle-off'></i> Hide</a>";
                                             }else {
-                                                echo "<a href='{{ route('Category.List.Show') }}'><i class='fa-solid fa-toggle-on'></i>Show</a>";
+                                                echo "<a href='/Show-Category-Food/$listCategoryFoods->category_id'><i class='fa-solid fa-toggle-on'></i>Show</a>";
                                             }
                                             ?>
                                         </td>
                                         
                                         <td>
-                                            <button class="btn btn-warning"><i class="fa-regular fa-pen-to-square"></i>
-                                                Edit</button>
-                                            <button class="btn btn-danger"><i
-                                                    class="fa-regular fa-trash-can"></i> Delete</button>
+                                            <a href="{{URL::to('/Edit-Category/'.$listCategoryFoods->category_id)}}">
+                                                <button class="btn btn-warning"><i class="fa-regular fa-pen-to-square"></i>Edit</button>
+                                            </a>
+                                            <a onclick="return confirm('Are you sure you want to delete this category?')" href="/Delete-Category/{{$listCategoryFoods->category_id}}">
+                                                <button class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Delete</button>
+                                            </a>
+                                            
                                         </td>
                                     </tr>
                                 @endforeach
