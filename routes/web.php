@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryFoodController;
+use App\Http\Controllers\LocalFoodController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +35,12 @@ Route::get("/Show-Category-Food/{CategoryFoodID}",[CategoryFoodController::class
 Route::get("/Edit-Category/{CategoryFoodID}",[CategoryFoodController::class,"EditCategory"])->name("Category.Edit");
 Route::get("/Delete-Category/{CategoryFoodID}",[CategoryFoodController::class,"DeleteCategory"])->name("Category.Delete");
 Route::post("Update-Category/{category_food_id}",[CategoryFoodController::class,"UpdateCategory"])->name("Category.Update");
+// Local Food
+Route::get("/Add-Local-Name",[LocalFoodController::class,"AddLocalName"])->name("Local.Add");
+Route::get("/Local-Listings",[LocalFoodController::class,"LocalListings"])->name("Local.List");
+Route::post("/Save-Local",[LocalFoodController::class,"SaveLocal"])->name("Local.Add.Save");
+Route::get("/Hide-Local-Food/{LocalFoodID}",[LocalFoodController::class,"HideLocalFood"])->name("Local.List.Hide");
+Route::get("/Show-Local-Food/{LocalFoodID}",[LocalFoodController::class,"ShowLocalFood"])->name("Local.List.Show");
+Route::get("/Edit-Local/{LocalFoodID}",[LocalFoodController::class,"LocalEditing"])->name("Local.Edit");
+Route::get("/Delete-Local/{LocalFoodID}",[LocalFoodController::class,"DeleteLocal"])->name("Local.Delete");
+Route::post("Update-Local/{LocalFoodID}",[LocalFoodController::class,"UpdateLocal"])->name("Local.Update");

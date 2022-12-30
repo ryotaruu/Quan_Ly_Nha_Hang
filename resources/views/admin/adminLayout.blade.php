@@ -246,6 +246,29 @@
                                 </li>
                             </ul>
                         </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                    Local
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ URL::to('/Add-Local-Name') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Add Local Name</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ URL::to('/Local-Listings') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Local Listings</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                         <!--Logout-->
                         <li class="nav-item">
                             <a href="#" class="nav-link">
