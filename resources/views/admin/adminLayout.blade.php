@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin Dashboard | SENFOOD</title>
+    <title>Trang quản lý | SENFOOD</title>
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -46,7 +46,7 @@
                             class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="{{ route("home") }}" class="nav-link">Home</a>
+                    <a href="{{ route("home") }}" class="nav-link">Trang chủ</a>
                 </li>
             </ul>
 
@@ -92,8 +92,8 @@
                                         Nguyễn Trung Đức
                                         <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
                                     </h3>
-                                    <p class="text-sm">Booked and paid for...</p>
-                                    <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                                    <p class="text-sm">Đặt bàn và thanh toán cho...</p>
+                                    <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 tiếng trước</p>
                                 </div>
                             </div>
                             <!-- Message End -->
@@ -109,8 +109,8 @@
                                         Nguyên Thế Long
                                         <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
                                     </h3>
-                                    <p class="text-sm">Food payment</p>
-                                    <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                                    <p class="text-sm">Thanh toán món ăn</p>
+                                    <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 tiếng trước</p>
                                 </div>
                             </div>
                             <!-- Message End -->
@@ -127,14 +127,14 @@
                                         <span class="float-right text-sm text-warning"><i
                                                 class="fas fa-star"></i></span>
                                     </h3>
-                                    <p class="text-sm">5-star rating for service</p>
-                                    <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                                    <p class="text-sm">Đánh giá 5 sao cho dịch vụ</p>
+                                    <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 tiếng trước</p>
                                 </div>
                             </div>
                             <!-- Message End -->
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+                        <a href="#" class="dropdown-item dropdown-footer">Xem toàn bộ tin nhắn</a>
                     </div>
                 </li>
                 <!-- Notifications Dropdown Menu -->
@@ -144,24 +144,24 @@
                         <span class="badge badge-warning navbar-badge">15</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                        <span class="dropdown-item dropdown-header">15 Notifications</span>
+                        <span class="dropdown-item dropdown-header">15 thông báo</span>
                         <div class="dropdown-divider"></div>
                         <a href="#" class="dropdown-item">
-                            <i class="fas fa-envelope mr-2"></i> 4 new messages
-                            <span class="float-right text-muted text-sm">3 mins</span>
+                            <i class="fas fa-envelope mr-2"></i> 4 tin nhắn mới
+                            <span class="float-right text-muted text-sm">3 phút trước</span>
                         </a>
                         <div class="dropdown-divider"></div>
                         <a href="#" class="dropdown-item">
-                            <i class="fas fa-users mr-2"></i> 8 friend requests
-                            <span class="float-right text-muted text-sm">12 hours</span>
+                            <i class="fas fa-users mr-2"></i> 8 yêu cầu thanh toán
+                            <span class="float-right text-muted text-sm">12 tiếng trước</span>
                         </a>
                         <div class="dropdown-divider"></div>
                         <a href="#" class="dropdown-item">
-                            <i class="fas fa-file mr-2"></i> 3 new reports
-                            <span class="float-right text-muted text-sm">2 days</span>
+                            <i class="fas fa-file mr-2"></i> 3 báo cáo mới
+                            <span class="float-right text-muted text-sm">2 ngày trước</span>
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+                        <a href="#" class="dropdown-item dropdown-footer">Xem toàn bộ thông báo</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -185,7 +185,7 @@
             <a href="index3.html" class="brand-link">
                 <img src="{{asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                     style="opacity: .8">
-                <span class="brand-text font-weight-light">Admin Dashboard</span>
+                <span class="brand-text font-weight-light">Trang quản lý</span>
             </a>
             <!-- Sidebar -->
             <div class="sidebar">
@@ -227,7 +227,7 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-copy"></i>
                                 <p>
-                                    Category
+                                    Danh mục món ăn
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
@@ -235,13 +235,13 @@
                                 <li class="nav-item">
                                     <a href="{{ route("Category.Add") }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Add Category Food</p>
+                                        <p>Thêm danh mục</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{ route("Category.List") }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>List Category Food</p>
+                                        <p>Danh sách danh mục</p>
                                     </a>
                                 </li>
                             </ul>
@@ -250,7 +250,7 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-copy"></i>
                                 <p>
-                                    Local
+                                    Địa danh
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
@@ -258,13 +258,37 @@
                                 <li class="nav-item">
                                     <a href="{{ URL::to('/Add-Local-Name') }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Add Local Name</p>
+                                        <p>Thêm địa danh</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{ URL::to('/Local-Listings') }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Local Listings</p>
+                                        <p>Danh sách địa danh</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Food -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                    Món ăn
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ URL::to('/More-Dishes') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Thêm món ăn</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ URL::to('/Food-List') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Danh sách món ăn</p>
                                     </a>
                                 </li>
                             </ul>
@@ -274,7 +298,7 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-copy"></i>
                                 <p>
-                                    Sign Out
+                                    Đăng xuất
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
@@ -282,7 +306,7 @@
                                 <li class="nav-item">
                                     <a href="{{ route("Admin.SignOut") }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Sign Out</p>
+                                        <p>Đăng xuất</p>
                                     </a>
                                 </li>
                             </ul>
@@ -300,12 +324,12 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Dashboard</h1>
+                            <h1 class="m-0">Trang quản lý</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="{{ route("Dashboard") }}">Home</a></li>
-                                <li class="breadcrumb-item active">Dashboard</li>
+                                <li class="breadcrumb-item"><a href="{{ route("Dashboard") }}">Trang chủ</a></li>
+                                <li class="breadcrumb-item active">Trang quản lý</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -322,10 +346,10 @@
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
-            <strong>Copyright &copy; 2023 <a href="https://www.facebook.com/senkuro.sj/">Senkiysma</a>.</strong>
-            All rights reserved.
+            <strong>Website được phát triển bởi <a href="https://www.facebook.com/senkuro.sj/">Senkiysma</a>.</strong>
+            Hoàn thiệt tại
             <div class="float-right d-none d-sm-inline-block">
-                <b>EXP</b> Company
+                <b>Công ty</b> EXP
             </div>
         </footer>
 

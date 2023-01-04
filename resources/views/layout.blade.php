@@ -18,7 +18,7 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="shortcut icon" href="{{ asset('Front_End/images/Screenshot_2023-01-04_171309-removebg-preview.png') }}">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
@@ -64,7 +64,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="logo pull-left">
-                            <a href="{{ route("home") }}"><img src="{{ asset('Front_End/images/home/logo.png') }}" alt="" /></a>
+                            <a href="{{ route("home") }}"><img src="{{ asset('Front_End/images/Screenshot_2023-01-04_171309-removebg-preview.png') }}" alt="" style="MAX-WIDTH: 50%;MARGIN-BOTTOM: -53PX; MARGIN-LEFT: 17PX; MARGIN-TOP: -20PX;" /></a>
                         </div>
                         <div class="btn-group pull-right">
                             <div class="btn-group">

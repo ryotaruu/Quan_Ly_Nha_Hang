@@ -2,7 +2,7 @@
 @section('content')
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Local Editing</h3>
+            <h3 class="card-title">Chỉnh sửa địa danh</h3>
         </div>
         <?php
         $message = session()->get("message");
@@ -18,17 +18,17 @@
             @csrf
             <div class="card-body">
                 <div class="form-group">
-                    <label for="NameCategory">Local Name</label>
+                    <label for="NameCategory">Tên địa danh</label>
                     <input type="text" name="LocalName" class="form-control" id="LocalName" placeholder="Local Name" value="{{$Data->local_name}}">
                 </div>
                 <div class="form-group">
-                    <label for="Describe">Local Description</label>
+                    <label for="Describe">Mô tả địa danh</label>
                     <textarea name="LocalDescription" style="resize: none" rows="8" type="text" class="form-control" id="LocalDescription" placeholder="Local Description">{{$Data->local_desc}}</textarea>
                 </div>
             </div>
             <!-- /.card-body -->
             <div class="card-footer">
-                <button type="submit" name="SaveLocal" class="btn btn-primary">Save Local</button>
+                <button type="submit" name="SaveLocal" class="btn btn-primary">Lưu</button>
             </div>
         </form>
         @endforeach

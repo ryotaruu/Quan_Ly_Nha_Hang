@@ -2,7 +2,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Danh sách địa danh</h3>
+            <h3 class="card-title">Danh sách món ăn</h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -25,12 +25,22 @@
                             <thead>
                                 <tr>
                                     <th class="sorting sorting_asc" tabindex="0" aria-controls="example2" rowspan="1"
-                                        colspan="1" aria-sort="ascending" aria-label="ID">Mã ID
+                                        colspan="1" aria-sort="ascending" aria-label="ID">ID
                                     </th>
                                     <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
-                                        colspan="1" aria-label="Name Category">Tên địa danh</th>
+                                        colspan="1" aria-label="Name Category">Tên món ăn</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
+                                        colspan="1" aria-label="Name Category">Hình ảnh</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
+                                        colspan="1" aria-label="Name Category">Danh mục</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
+                                        colspan="1" aria-label="Name Category">Địa phương</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
+                                        colspan="1" aria-label="Desc Category">Loại</th>
                                     <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
                                         colspan="1" aria-label="Desc Category">Mô tả</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
+                                        colspan="1" aria-label="Name Category">Giá bán</th>
                                     <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
                                         colspan="1" aria-label="Status">
                                         Trạng thái</th>
@@ -40,27 +50,32 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($LocalListings as $key => $Data)
+                                @foreach ($allFood as $key => $Data)
                                     <tr class="odd">
                                         <td class="dtr-control sorting_1" tabindex="0">
-                                            {{ $Data->local_id }}</td>
+                                            {{ $Data->dishes_id }}</td>
+                                        <td>{{ $Data->dishes_name }}</td>
+                                        <td> <img src="public/upload/food/{{ $Data->dishes_image }}" height="100" width="120"></td>
+                                        <td>{{ $Data->category_name }}</td>
                                         <td>{{ $Data->local_name }}</td>
-                                        <td>{{ $Data->local_desc }}</td>
+                                        <td>{{ $Data->dishes_desc }}</td>
+                                        <td>{{ $Data->dishes_content }}</td>
+                                        <td>{{ $Data->dishes_price }}</td>
                                         <td>
                                             <?php
-                                            if($Data->local_status == 0){
-                                                echo "<a href='/Hide-Local-Food/$Data->local_id'><i class='fa-solid fa-toggle-off'></i> Ẩn</a>";
+                                            if($Data->dishes_status == 0){
+                                                echo "<a href='/Hide-Dishes/$Data->dishes_id'><i class='fa-solid fa-toggle-off'></i> Ẩn</a>";
                                             }else {
-                                                echo "<a href='/Show-Local-Food/$Data->local_id'><i class='fa-solid fa-toggle-on'></i>Hiển thị</a>";
+                                                echo "<a href='/Show-Dishes/$Data->dishes_id'><i class='fa-solid fa-toggle-on'></i>Hiển thị</a>";
                                             }
                                             ?>
                                         </td>
                                         
                                         <td>
-                                            <a href="{{URL::to('/Edit-Local/'.$Data->local_id)}}">
+                                            <a href="{{URL::to('/Edit-Dishes/'.$Data->dishes_id)}}">
                                                 <button class="btn btn-warning"><i class="fa-regular fa-pen-to-square"></i>Sửa</button>
                                             </a>
-                                            <a onclick="return confirm('Are you sure you want to delete this category?')" href="/Delete-Local/{{$Data->local_id}}">
+                                            <a onclick="return confirm('Are you sure you want to delete this category?')" href="/Delete-Dishes/{{$Data->dishes_id}}">
                                                 <button class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Xóa</button>
                                             </a>
                                             
