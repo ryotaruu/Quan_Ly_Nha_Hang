@@ -88,32 +88,50 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="total_area">
-                        <div id="demo" style="color: black"></div>
+                        <div id="demo" style="color: black"><p class='text-center'>Quán cần bạn chọn phương thức thanh toán</p></div>
                         <ul>
                             <li style="color: black">Tổng tiền<span class="input-element">{{number_format((float)str_replace(',', '', Cart::subtotal())).' VNĐ'}}</span></li>
                             <script>
                                 function checkAlert(evt) {
                                     if (evt.target.value == 1) {
                                         document.getElementById("demo").innerHTML = "<p class='text-center'>Bạn sẽ ăn tại quán</p>";
+                                        document.getElementById("total").innerHTML = "<li style='color: black'>Số tiền phải thanh toán<span>{{number_format((float)str_replace(',', '', Cart::subtotal())).' VNĐ'}}</span></li>";
+                                        document.getElementById("ButtonCheckOut").innerHTML = "<a class='btn btn-default check_out ' href='#ThanhToan' style='color: black'>Thanh toán</a>"
                                     }
                                     if (evt.target.value == 2) {
                                         document.getElementById("demo").innerHTML = "<p class='text-center'>Quán sẽ tính chi phí vận chuyển</p>";
                                         document.getElementById("tax").innerHTML = "<li style='color: black'>Chi phí đóng gói đồ ăn<span>{{number_format((float)str_replace(',', '', Cart::tax())).' VNĐ'}}</span></li>";
                                         document.getElementById("ship").innerHTML = "<li style='color: black'>Phí vận chuyển<span>Miễn phí</span></li>";
+                                        document.getElementById("total").innerHTML = "<li style='color: black'>Số tiền phải thanh toán<span>{{number_format((float)str_replace(',', '', Cart::total())).' VNĐ'}}</span></li>";
+                                        document.getElementById("ButtonCheckOut").innerHTML = "<a class='btn btn-default check_out ' href='#ThanhToan' style='color: black'>Thanh toán</a>"
                                     }
-                                    if (evt.target.value === "Lựa chọn ăn tại quán hay vận chuyển") {
+                                    // if (evt.target.value === "Lựa chọn ăn tại quán hay vận chuyển") {
+                                    //     document.getElementById("demo").innerHTML = "<p class='text-center'>Quán cần bạn chọn phương thức thanh toán</p>";
+                                    //     document.getElementById("tax").innerHTML = "<li style='color: black'>Chi phí đóng gói đồ ăn<span>0 VNĐ</span></li>";
+                                    //     document.getElementById("ship").innerHTML = "<li style='color: black'>Phí vận chuyển<span>Miễn phí</span></li>";
+                                    // }
+                                    if(event.target.value == 0){
                                         document.getElementById("demo").innerHTML = "<p class='text-center'>Quán cần bạn chọn phương thức thanh toán</p>";
-                                        document.getElementById("tax").innerHTML = "<li style='color: black'>Chi phí đóng gói đồ ăn<span>0 VNĐ</span></li>";
-                                        document.getElementById("ship").innerHTML = "<li style='color: black'>Phí vận chuyển<span>Miễn phí</span></li>";
+                                        document.getElementById("tax").innerHTML = "<li style='color: black'>Chi phí đóng gói đồ ăn<span>Đang tính. . .</span></li>";
+                                        document.getElementById("ship").innerHTML = "<li style='color: black'>Phí vận chuyển<span>Đang tính. . .</span></li>";
+                                        document.getElementById("total").innerHTML = "<li style='color: black'>Số tiền phải thanh toán<span>Đang tính. . .</span></li>";
+                                        document.getElementById("ButtonCheckOut").innerHTML = "<a class='btn btn-default check_out disabled' href='#KhongTheThanhToan' style='color: black'>Thanh toán</a>"
                                     }
                                 }
                             </script>
-                            <div id="tax"></div>
-                            <div id="ship"></div>
-                            <li style="color: black">Số tiền phải thanh toán<span>{{number_format((float)str_replace(',', '', Cart::total())).' VNĐ'}}</span></li>
+                            <div id="tax">
+{{--                                <li style='color: black'>Chi phí đóng gói đồ ăn<span>Đang tính. . .</span></li>--}}
+                            </div>
+                            <div id="ship">
+{{--                                <li style='color: black'>Phí vận chuyển<span>Đang tính. . .</span></li>--}}
+                            </div>
+                            <div id="total">
+{{--                                <li style="color: black">Số tiền phải thanh toán<span>Đang tính. . .</span></li>--}}
+                            </div>
                         </ul>
                         <a class="btn btn-default update" href="" style="color: black">Cập nhật</a>
-                        <a class="btn btn-default check_out" href="" style="color: black">Thanh toán</a>
+                        <a id="ButtonCheckOut"></a>
+{{--                        <a class='btn btn-default check_out disabled' href='' style='color: black;'>Thanh toán</a>--}}
                     </div>
                 </div>
             </div>
