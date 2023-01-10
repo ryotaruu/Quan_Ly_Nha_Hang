@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 
 class FoodController extends Controller
 {
@@ -82,7 +83,7 @@ class FoodController extends Controller
         return view("admin.adminLayout")->with("admin.food.editFood",$managerFood);
     }
     public function updateFood(Request $request,$foodId){
-        
+
         $this->authLogin();
         $data = array();
         $data["dishes_name"] = $request->foodName;
@@ -113,5 +114,15 @@ class FoodController extends Controller
         DB::table('tbl_dishes')->where('dishes_id',$foodId)->delete();
         session()->put('message','Xóa món ăn thành công');
         return Redirect()->route('Food.List');
+    }
+    public function detailFood($foodId){
+        $category = DB::table('tbl_category_food')->where('category_status','1')->orderby('category_id','desc')->get();
+        $local = DB::table('tbl_local')->where('local_status','1')->orderby('local_id','desc')->get();
+        $detailFood = DB::table("tbl_dishes")->join('tbl_category_food','tbl_category_food.category_id','=','tbl_dishes.category_id')->join('tbl_local','tbl_local.local_id','=','tbl_dishes.local_id')->where('tbl_dishes.dishes_id',$foodId)->get();
+        foreach ($detailFood as $data){
+            $categoryID = $data->category_id;
+        }
+        $relatedFood = DB::table("tbl_dishes")->join('tbl_category_food','tbl_category_food.category_id','=','tbl_dishes.category_id')->join('tbl_local','tbl_local.local_id','=','tbl_dishes.local_id')->where('tbl_category_food.category_id',$categoryID)->whereNotIn('tbl_dishes.dishes_id',[$foodId])->get();
+        return view('pages.food.detailFood', ['category' => $category],['local' => $local])->with('detailFood',$detailFood)->with('relatedFood',$relatedFood);
     }
 }

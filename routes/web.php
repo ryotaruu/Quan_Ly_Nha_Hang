@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryFoodController;
 use App\Http\Controllers\LocalFoodController;
 use App\Http\Controllers\FoodController;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +20,12 @@ use App\Http\Controllers\FoodController;
 */
 // FrontEnd
 Route::get('/', [HomeController::class, "index"]);
-Route::get("/Home", function(){
-    return view('pages.home');
-})->name("home");
+Route::get("/Home", [HomeController::class, "index"])->name('home');
+// Category home
+Route::get('/List-Category/{categoryId}',[CategoryFoodController::class,'showCategory']);
+// Local home
+Route::get('/List-Local/{localId}',[LocalFoodController::class,'showLocal']);
+Route::get('Detail-Food/{foodId}',[FoodController::class,'detailFood']);
 // BackEnd
 Route::get("/Admin",[AdminController::class, "index"])->name("Admin");
 Route::get("/Dashboard-Admin",[AdminController::class, "dashboardAdmin"])->name("Dashboard");
@@ -54,3 +58,6 @@ Route::get("/Show-Dishes/{foodId}",[FoodController::class,"showFood"])->name("Fo
 Route::get("/Edit-Dishes/{foodId}",[FoodController::class,"editFood"])->name("Food.Edit");
 Route::get("/Delete-Dishes/{foodId}",[FoodController::class,"deleteFood"])->name("Food.Delete");
 Route::post("Update-Dishes/{foodId}",[FoodController::class,"updateFood"])->name("Food.Update");
+//cart
+Route::post('/Save-Cart',[CartController::class,'SaveCart']);
+Route::get('/Show-Cart',[CartController::class,'ShowCart']);

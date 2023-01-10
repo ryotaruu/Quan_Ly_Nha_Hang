@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Home | SENFOOD</title>
+    <title>Trang chủ | SENFOOD</title>
     <link href="{{ asset('Front_End/Css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('Front_End/Css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('Front_End/Css/prettyPhoto.css') }}" rel="stylesheet">
@@ -95,11 +95,11 @@
                     <div class="col-sm-8">
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
-                                <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
-                                <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-                                <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                                <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+                                <li><a href="#"><i class="fa fa-user"></i> Tài khoản</a></li>
+                                <li><a href="#"><i class="fa fa-star"></i> Danh sách yêu thích</a></li>
+                                <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Đăng xuất</a></li>
+                                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Đơn tại quán</a></li>
+                                <li><a href="login.html"><i class="fa fa-lock"></i> Đăng nhập</a></li>
                             </ul>
                         </div>
                     </div>
@@ -107,7 +107,6 @@
             </div>
         </div>
         <!--/header-middle-->
-
         <div class="header-bottom">
             <!--header-bottom-->
             <div class="container">
@@ -124,24 +123,24 @@
                         </div>
                         <div class="mainmenu pull-left">
                             <ul class="nav navbar-nav collapse navbar-collapse">
-                                <li><a href="{{ route("home") }}" class="active">Home</a></li>
-                                <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.html">Products</a></li>
-                                        <li><a href="product-details.html">Product Details</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                        <li><a href="cart.html">Cart</a></li>
-                                        <li><a href="login.html">Login</a></li>
+                                <li><a href="{{ route("home") }}" class="active">Trang chủ</a></li>
+                                <li class="dropdown"><a href="#">Quán<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu" style="background: #ffde59">
+                                        <li><a href="shop.html">Món ăn</a></li>
+                                        <li><a href="product-details.html">Miêu tả món ăn</a></li>
+                                        <li><a href="checkout.html">Đăng xuất</a></li>
+                                        <li><a href="cart.html">Đơn hàng tại quán</a></li>
+                                        <li><a href="login.html">Đăng nhập</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="blog.html">Blog List</a></li>
-                                        <li><a href="blog-single.html">Blog Single</a></li>
+                                <li class="dropdown"><a href="#">Tin tức<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu" style="background: #ffde59">
+                                        <li><a href="blog.html">Danh sách bài viết</a></li>
+                                        <li><a href="blog-single.html">Bài viết đơn</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="404.html">404</a></li>
-                                <li><a href="contact-us.html">Contact</a></li>
+                                <li><a href="404.html">Đơn tại quán</a></li>
+                                <li><a href="contact-us.html">Liên hệ</a></li>
                             </ul>
                         </div>
                     </div>
@@ -171,43 +170,40 @@
 
                         <div class="carousel-inner">
                             <div class="item active">
-                                <div class="col-sm-6">
-                                    <h1><span>E</span>-SHOPPER</h1>
-                                    <h2>Free E-Commerce Template</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. </p>
-                                    <button type="button" class="btn btn-default get">Get it now</button>
+                                <div class="col-sm-6" style="color: black">
+                                    <h1><span style="color: black">Sen</span>-Food</h1>
+                                    <h2>Trải nghiệm tốt</h2>
+                                    <p>Không để cho các thực khách phải chờ đợi quá lâu trong việc sắp xếp thời gian lựa chọn món tại quán. chúng tôi mang tới dịch vụ online thuận tiện nhất cho thời gian của bạn.</p>
+                                    <button type="button" class="btn btn-default get" style="color: black">Đặt đơn tại quán ngay</button>
                                 </div>
                                 <div class="col-sm-6">
                                     <img src="{{ asset('Front_End/images/home/girl1.jpg') }}" class="girl img-responsive" alt="" />
-                                    <img src="{{ asset('Front_End/images/home/pricing.png') }}" class="pricing" alt="" />
+                                    <img style="margin-top: -15px" src="{{ asset('Front_End/images/Screenshot_2023-01-04_171309-removebg-preview.png') }}" class="pricing" alt="" />
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="col-sm-6">
-                                    <h1><span>E</span>-SHOPPER</h1>
-                                    <h2>100% Responsive Design</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. </p>
-                                    <button type="button" class="btn btn-default get">Get it now</button>
+                                <div class="col-sm-6" style="color: black">
+                                    <h1><span style="color: black">Sen</span>-Food</h1>
+                                    <h2>Dịch vụ tốt</h2>
+                                    <p>Không để cho các thực khách phải chờ đợi quá lâu trong việc sắp xếp thời gian lựa chọn món tại quán. chúng tôi mang tới dịch vụ online thuận tiện nhất cho thời gian của bạn.</p>
+                                    <button type="button" class="btn btn-default get" style="color: black">Đặt đơn tại quán ngay</button>
                                 </div>
                                 <div class="col-sm-6">
                                     <img src="{{ asset('Front_End/images/home/girl2.jpg') }}" class="girl img-responsive" alt="" />
-                                    <img src="{{ asset('Front_End/images/home/pricing.png') }}" class="pricing" alt="" />
+                                    <img style="margin-top: -15px" src="{{ asset('Front_End/images/Screenshot_2023-01-04_171309-removebg-preview.png') }}" class="pricing" alt="" />
                                 </div>
                             </div>
 
                             <div class="item">
-                                <div class="col-sm-6">
-                                    <h1><span>E</span>-SHOPPER</h1>
-                                    <h2>Free Ecommerce Template</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. </p>
-                                    <button type="button" class="btn btn-default get">Get it now</button>
+                                <div class="col-sm-6" style="color: black">
+                                    <h1><span style="color: black">Sen</span>-Food</h1>
+                                    <h2>Thương hiệu tốt</h2>
+                                    <p>Không để cho các thực khách phải chờ đợi quá lâu trong việc sắp xếp thời gian lựa chọn món tại quán. chúng tôi mang tới dịch vụ online thuận tiện nhất cho thời gian của bạn.</p>
+                                    <button type="button" class="btn btn-default get" style="color: black">Đặt đơn tại quán ngay</button>
                                 </div>
                                 <div class="col-sm-6">
                                     <img src="{{ asset('Front_End/images/home/girl3.jpg') }}" class="girl img-responsive" alt="" />
-                                    <img src="{{ asset('Front_End/images/home/pricing.png') }}" class="pricing" alt="" />
+                                    <img style="margin-top: -15px" src="{{ asset('Front_End/images/Screenshot_2023-01-04_171309-removebg-preview.png') }}" class="pricing" alt="" />
                                 </div>
                             </div>
 
@@ -232,136 +228,34 @@
             <div class="row">
                 <div class="col-sm-3">
                     <div class="left-sidebar">
-                        <h2>Category</h2>
+                        <h2 style="color: black">Danh mục món ăn</h2>
                         <div class="panel-group category-products" id="accordian">
                             <!--category-productsr-->
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                            Sportswear
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="sportswear" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Nike </a></li>
-                                            <li><a href="#">Under Armour </a></li>
-                                            <li><a href="#">Adidas </a></li>
-                                            <li><a href="#">Puma</a></li>
-                                            <li><a href="#">ASICS </a></li>
-                                        </ul>
+                            @foreach($category as $key => $data)
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"><a style="color: black;" href="{{URL::to('/List-Category/'.$data->category_id)}}">{{$data->category_name}}</a></h4>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#mens">
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                            Mens
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="mens" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Fendi</a></li>
-                                            <li><a href="#">Guess</a></li>
-                                            <li><a href="#">Valentino</a></li>
-                                            <li><a href="#">Dior</a></li>
-                                            <li><a href="#">Versace</a></li>
-                                            <li><a href="#">Armani</a></li>
-                                            <li><a href="#">Prada</a></li>
-                                            <li><a href="#">Dolce and Gabbana</a></li>
-                                            <li><a href="#">Chanel</a></li>
-                                            <li><a href="#">Gucci</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#womens">
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                            Womens
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="womens" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Fendi</a></li>
-                                            <li><a href="#">Guess</a></li>
-                                            <li><a href="#">Valentino</a></li>
-                                            <li><a href="#">Dior</a></li>
-                                            <li><a href="#">Versace</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Kids</a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Fashion</a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Households</a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Interiors</a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Clothing</a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Bags</a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Shoes</a></h4>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                         <!--/category-products-->
 
                         <div class="brands_products">
                             <!--brands_products-->
-                            <h2>Brands</h2>
+                            <h2 style="color: black">Địa danh</h2>
                             <div class="brands-name">
                                 <ul class="nav nav-pills nav-stacked">
-                                    <li><a href="#"> <span class="pull-right">(50)</span>Acne</a></li>
-                                    <li><a href="#"> <span class="pull-right">(56)</span>Grüne Erde</a></li>
-                                    <li><a href="#"> <span class="pull-right">(27)</span>Albiro</a></li>
-                                    <li><a href="#"> <span class="pull-right">(32)</span>Ronhill</a></li>
-                                    <li><a href="#"> <span class="pull-right">(5)</span>Oddmolly</a></li>
-                                    <li><a href="#"> <span class="pull-right">(9)</span>Boudestijn</a></li>
-                                    <li><a href="#"> <span class="pull-right">(4)</span>Rösch creative
-                                            culture</a></li>
+                                    @foreach($local as $key => $data)
+                                        <li><a style="color: black;" href="{{URL::to('/List-Local/'.$data->local_id)}}"> <span class="pull-right">(50)</span>{{$data->local_name}}</a></li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
                         <!--/brands_products-->
                         <div class="price-range">
                             <!--price-range-->
-                            <h2>Price Range</h2>
+                            <h2 style="color: black">Sắp xếp theo giá</h2>
                             <div class="well text-center">
                                 <input type="text" class="span2" value="" data-slider-min="0"
                                     data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]"
@@ -370,11 +264,10 @@
                             </div>
                         </div>
                         <!--/price-range-->
-
-                        <div class="shipping text-center">
-                            <!--shipping-->
-                            <img src="{{ asset('images/home/shipping.jpg') }}" alt="" />
-                        </div>
+{{--                        <div class="shipping text-center">--}}
+{{--                            <!--shipping-->--}}
+{{--                            <img src="{{ asset('images/home/shipping.jpg') }}" alt="" />--}}
+{{--                        </div>--}}
                         <!--/shipping-->
                     </div>
                 </div>

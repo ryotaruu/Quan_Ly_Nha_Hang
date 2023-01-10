@@ -77,4 +77,13 @@ class CategoryFoodController extends Controller
         session()->put('message','Delete category successful');
         return Redirect()->route('Category.List');
     }
+    // front end
+    public function showCategory($categoryId){
+        $category = DB::table('tbl_category_food')->where('category_status','1')->orderby('category_id','desc')->get();
+        $local = DB::table('tbl_local')->where('local_status','1')->orderby('local_id','desc')->get();
+        $newCategory = DB::table('tbl_dishes')->join('tbl_category_food','tbl_category_food.category_id','=','tbl_dishes.category_id')->where('tbl_dishes.category_id',$categoryId)->get();
+        $titleCategory = DB::table('tbl_category_food')->select('category_name')->where('category_id',$categoryId)->get();
+        return view('pages.category.showCategory',['category' => $category],['local' => $local])->with('food',$newCategory)->with('title',$titleCategory);
+    }
+
 }
