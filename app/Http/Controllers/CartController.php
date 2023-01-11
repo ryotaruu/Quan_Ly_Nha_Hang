@@ -32,7 +32,7 @@ class CartController extends Controller
                 'desc' => $Desc,
             ],
         ]);
-//        Cart::destroy();
+       // Cart::destroy();
         return Redirect::to('/Show-Cart');
     }
     public function ShowCart()
@@ -40,5 +40,17 @@ class CartController extends Controller
         $category = DB::table('tbl_category_food')->where('category_status','1')->orderby('category_id','desc')->get();
         $local = DB::table('tbl_local')->where('local_status','1')->orderby('local_id','desc')->get();
         return view('pages.Cart.ShowCart',['category' => $category],['local' => $local]);
+    }
+    public function DeleteCart($rowId)
+    {
+        Cart::update($rowId,0);
+        return Redirect::to('Show-Cart');
+    }
+    public function UpdateCartQuantity(Request $request)
+    {
+        $RowId = $request->RowIdCart;
+        $Quantity = $request->Quantity;
+        Cart::update($RowId,$Quantity);
+        return Redirect::to('Show-Cart');
     }
 }

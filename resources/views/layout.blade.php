@@ -95,11 +95,11 @@
                     <div class="col-sm-8">
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
-                                <li><a href="#"><i class="fa fa-user"></i> Tài khoản</a></li>
-                                <li><a href="#"><i class="fa fa-star"></i> Danh sách yêu thích</a></li>
-                                <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Đăng xuất</a></li>
-                                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Đơn tại quán</a></li>
-                                <li><a href="login.html"><i class="fa fa-lock"></i> Đăng nhập</a></li>
+                                <li><a href="{{ URL::to('/Login-Check-Out-In-Restaurant') }}"><i class="fa fa-user"></i> Tài khoản</a></li>
+                                <li><a href="{{ URL::to('/Favourite') }}"><i class="fa fa-star"></i> Danh sách yêu thích</a></li>
+                                <li><a href="{{ URL::to('/Check-Out') }}"><i class="fa fa-crosshairs"></i> Thanh toán</a></li>
+                                <li><a href="{{ URL::to('/Show-Cart') }}"><i class="fa fa-shopping-cart"></i> Đơn tại quán</a></li>
+                                <li><a href="{{ URl::to('/Login-Check-Out-In-Restaurant') }}"><i class="fa fa-lock"></i> Đăng nhập</a></li>
                             </ul>
                         </div>
                     </div>

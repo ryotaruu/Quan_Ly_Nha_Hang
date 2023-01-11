@@ -7,6 +7,7 @@ use App\Http\Controllers\CategoryFoodController;
 use App\Http\Controllers\LocalFoodController;
 use App\Http\Controllers\FoodController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckOutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,3 +62,10 @@ Route::post("Update-Dishes/{foodId}",[FoodController::class,"updateFood"])->name
 //cart
 Route::post('/Save-Cart',[CartController::class,'SaveCart']);
 Route::get('/Show-Cart',[CartController::class,'ShowCart']);
+Route::get('/Delete-Cart/{rowId}',[CartController::class,'DeleteCart']);
+Route::post('/Update-Cart-Quantity',[CartController::class,'UpdateCartQuantity']);
+// check out
+Route::get("/Login-Check-Out-In-Restaurant",[CheckOutController::class,"LoginCheckOutInRestaurant"]);
+Route::get("/Login-Check-Out-Shipping",[CheckOutController::class,"LoginCheckOutShipping"]);
+Route::post("/Add-Customer",[CheckOutController::class,"AddCustomer"]);
+Route::get('/Check-Out',[CheckOutController::class,'CheckOut']);

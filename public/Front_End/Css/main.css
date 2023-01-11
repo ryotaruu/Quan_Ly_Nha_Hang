@@ -214,8 +214,8 @@ a#scrollUp i{
 
 
 .shop-menu ul li a:hover {
-	color:rgb(255 222 89);
-	background:#fff;
+	/* color:rgb(255 222 89); */
+	background:rgb(255 222 89);
 }
 
 
@@ -247,7 +247,7 @@ a#scrollUp i{
 }
 
 .mainmenu ul li a:hover, .mainmenu ul li a.active,  .shop-menu ul li a.active{
-	background:none;
+	background: rgb(255 222 89);
 	color:black;
 }
 
@@ -319,7 +319,8 @@ ul.sub-menu {
 }
 
 .navbar-nav li ul.sub-menu li a:hover{
-    color: #FDB45E;
+    color: black;
+    background: rgb(255 222 89);
 }
 
 .fa-angle-down{
@@ -499,8 +500,8 @@ ul.sub-menu {
 }
 
 .single-widget ul li a:hover{
-	background:none;
-	color:rgb(255 222 89);
+	background:rgb(255 222 89);
+	color: black;
 }
 
 
@@ -777,8 +778,8 @@ h2.title:before{
 }
 
 .brands-name .nav-stacked li a:hover{
-  background-color: #fff;
-  color: #696763;
+  background:rgb(255 222 89);
+	color: black;
 }
 
 .shipping {
@@ -987,8 +988,8 @@ h2.title {
 }
 
 .choose ul li a:hover{
-	background:none;
-	color:rgb(255 222 89);
+	background:rgb(255 222 89);
+	color: black;
 }
 
 .category-tab {
@@ -1016,7 +1017,7 @@ h2.title {
 
 .category-tab ul  li  a:hover{
 	background:rgb(255 222 89);
-	color:black;
+	color: black;
 }
 
 .nav-tabs  li.active  a, .nav-tabs  li.active  a:hover, .nav-tabs  li.active  a:focus {
@@ -1114,7 +1115,7 @@ h2.title {
 .pagination  .active  a, .pagination  .active  span, .pagination  .active  a:hover, .pagination  .active  span:hover, .pagination  .active  a:focus, .pagination  .active  span:focus {
   background-color: rgb(255 222 89);
   border-color: rgb(255 222 89);
-  color: #FFFFFF;
+  color: black;
   cursor: default;
   z-index: 2;
 }
@@ -1134,7 +1135,7 @@ h2.title {
 
 .pagination  li  a:hover{
 	background:rgb(255 222 89);
-	color:#fff;
+	color: black;
 }
 
 
@@ -1331,8 +1332,8 @@ h2.title {
 }
 
 #reviews ul li a:hover{
-	background:#fff;
-	color:rgb(255 222 89);
+	background:rgb(255 222 89);
+	color: black;
 }
 
 #reviews p{
@@ -2134,8 +2135,8 @@ h2.title {
 
 .pager-area
 .pager li a:hover {
-  background: rgb(255 222 89);;
-  color: #fff
+  background:rgb(255 222 89);
+	color: black;
 }
 
 .rating-area {
@@ -2260,8 +2261,8 @@ h2.title {
 }
 
 .blog-socials ul li a:hover {
-  color: #fff;
   background:rgb(255 222 89);
+	color: black;
 }
 
 
@@ -2516,7 +2517,8 @@ h2.title {
 }
 
 .contact-info .social-networks ul li a:hover{
-  color: rgb(255 222 89);;
+  /* background:rgb(255 222 89); */
+	color: black;
 }
 
 
